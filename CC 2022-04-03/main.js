@@ -35,5 +35,7 @@ const mergeSortedArrays = (arr1, arr2) => {
   return mergedArr;
 }
 
+// time complexity: O(n)
+// space complexity: O(n)
 
 console.log(mergeSortedArrays(arr1, arr2));

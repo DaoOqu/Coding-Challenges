@@ -33,4 +33,8 @@ function reverse(str) {
   return backwards.join('');
 }
 
+
+// time complexity: O(n)
+// space complexity: O(n)
+
 console.log(reverse(str));

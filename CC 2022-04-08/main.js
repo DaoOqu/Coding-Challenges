@@ -33,3 +33,6 @@ function solutions(number){
   }
   return sum;
 }
+
+// time complexity: o(n)
+// space complexity: o(n)

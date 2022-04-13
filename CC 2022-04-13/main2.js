@@ -1,4 +1,4 @@
-// Coding challenge 04/12/2022
+// Coding challenge 04/13/2022
 
 // Test your ability to extend the functionality of built-in classes. In this case, we want you to extend the built-in Array class with the following methods: square(), cube(), average(), sum(), even() and odd().
 

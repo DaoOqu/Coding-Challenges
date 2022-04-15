@@ -42,9 +42,36 @@ function validSolution(board) {
 	}
 
 	//column testing
-
+	console.log("Column testing ...")
+	for (i = 0; i < board.length; i++) {
+		let col = []
+		for (j = 0; j < board.length; j++) {
+			col.push(board[j][i])
+		}
+		valid = testvaliditiy(col)
+		if (!valid) break;
+	}
 
 	//3x3 testing
+	console.log("Cube 3x3 testing ...")
+	let row = 0;
+	let column = 0;
+	while (row < 9 && column < 9) {
+		let cube = []
+		for (i = row; i < row + 3; i++) {
+			for (j = column; j < column + 3; j++) {
+				cube.push(board[i][j])
+			}
+		}
+		row += 3
+		valid = testvaliditiy(cube)
+		if (!valid) break;
+		if (row == 9 && column != 9) {
+			column += 3
+			row = 0;
+		}
+	}
+	return valid
 }
 
 

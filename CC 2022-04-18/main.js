@@ -20,6 +20,15 @@ function sequenceSum(begin, end, step) {
   return sum
 }
 
+// or
+
+// const sequenceSum = (begin, end, step) => {
+//   if (begin > end) {
+//     return 0;
+//   }
+//   return begin + sequenceSum(begin + step, end, step);
+// };
+
 sequenceSum(2,2,2) // 2
 sequenceSum(2,6,2) // 12
 sequenceSum(1,5,1) // 15

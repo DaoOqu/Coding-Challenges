@@ -1,4 +1,4 @@
-// Coding challenge 04/17/2022
+// Coding challenge 04/18/2022
 
 // make a function which returns the sum of a sequence of integers.
 

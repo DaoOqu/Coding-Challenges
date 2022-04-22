@@ -45,3 +45,7 @@ function findOdd(A) {
     if (obj[prop] % 2 !== 0) return Number(prop);
   }
 }
+
+// or
+
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);

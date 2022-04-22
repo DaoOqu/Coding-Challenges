@@ -31,3 +31,17 @@ function findOdd(A) {
   });
   return result;
 }
+
+// or
+
+function findOdd(A) {
+  let obj = {};
+  
+  A.forEach(el => {
+    obj[el] ? obj[el]++ : obj[el] = 1;
+  });
+  
+  for (prop in obj) {
+    if (obj[prop] % 2 !== 0) return Number(prop);
+  }
+}

@@ -27,6 +27,13 @@ function consecutive(arr) {
   return numbersBetween.length;
 }
 
+//or
+
+function consecutive(arr){
+  let l = arr.length;
+  return l ? Math.max(...arr) - Math.min(...arr) - l + 1 : 0;
+}
+
 consecutive([4,8,6]) //2
 consecutive([1,2,3,4]) //0)
 consecutive([]) //0

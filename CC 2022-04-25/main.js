@@ -26,6 +26,12 @@ const twistedSum = n => {
 }
 
 
+// or
+
+function twistedSum(n) {
+  return [...Array(n + 1).keys()].reduce((a, b) => a + [...""+b].reduce((x, y) => x + +y, 0), 0);
+}
+
 twistedSum(3) // 6
 twistedSum(10) // 46
 twistedSum(11) // 48

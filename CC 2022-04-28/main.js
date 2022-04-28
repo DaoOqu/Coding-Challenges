@@ -9,6 +9,15 @@
 // Output: false
 
 
+
+// Notes:
+// we can use the reverse property of arrays to help check if its a palindrome
+// start by making a new array and pushing the value of each node as we iterate through it
+// iterate through the linked-list using the next property and getting the value with the val property
+// reverse the new array and store it
+// iterate from the front of the reg array and iterate from the end of reversed array and compare values
+// return true or false 
+
 const isPalindrome = (head) => {
   if (head === null) {
       return true

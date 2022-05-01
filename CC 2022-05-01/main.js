@@ -62,7 +62,7 @@ const middleNode = (head) => {
 // fast to figure out if list is odd when done iterating 
 
 
-var middleNode = (head) => {
+const middleNodes = (head) => {
   let slow = head;
   let fast = head;
   

@@ -50,3 +50,29 @@ const middleNode = (head) => {
   }
   return null;
 };
+
+
+// Better solution
+
+// use fast/slow pointers to start at same place
+// if we allow fast = x2 Slow ->
+// then when fast is finished iterating through the list
+// slow will end up in the middle of the list
+// odd / even? -> fast.next to figure out if list is even when done iterating
+// fast to figure out if list is odd when done iterating 
+
+
+var middleNode = (head) => {
+  let slow = head;
+  let fast = head;
+  
+  while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+  }
+  return slow;
+};
+
+
+middleNode([1,2,3,4,5]) // [3,4,5]
+middleNode([1,2,3,4,5,6]) // [4,5,6]

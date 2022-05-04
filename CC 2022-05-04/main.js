@@ -45,3 +45,5 @@ var maximumWealth = function(accounts) {
   return Math.max(...result);
 };
 
+// time complexity: O(n)
+// space complexity: O(1)

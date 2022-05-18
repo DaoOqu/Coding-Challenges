@@ -34,3 +34,37 @@ const firstRecurringNum2 = arr => {
 
 // time complexity: O(n^2)
 // space complexity: O(1)
+
+
+
+// better approach
+const firstRecurringNum = arr => {
+
+  // create hashmap
+  let set = new Set();
+  
+  // if(arr.length < 2) return undefined; -> not needed. The program below takes care of empty or < 2 arrays
+  
+  // iterate through array and check if each value has been seen before
+  for(let i = 0; i < arr.length; i++) {
+    // if yes, return that value
+    if(set.has(arr[i])) return arr[i];
+
+    // if not, push it to hashmap
+    set.add(arr[i]);
+  }
+  // if none recurr, return undefined
+  return undefined;
+} 
+
+// time complexity: O(n)
+// space complexity: O(n)
+
+arr = [2,5,1,2,3,4,1,2,4];
+arr1 = [2,1,1,2,3,5,1,2,4];
+arr2 = [2,3,4,5];
+arr3 = [2];
+arr4 = [];
+
+console.log(firstRecurringNum(arr1));
+console.log(firstRecurringNum2(arr1));

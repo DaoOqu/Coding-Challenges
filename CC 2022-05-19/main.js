@@ -30,3 +30,25 @@ var containsDuplicate = function(nums) {
 
 // time complexity: O(n^2)
 // space complexity: O(1)
+
+
+// optimal solution using hashmap/set
+
+var containsDuplicate = function(nums) {
+  // initialize a set because we don't need keys, just values
+  let set = new Set();
+  
+  // loop through array and check if value is in set
+  for(let i = 0; i < nums.length; i++) {
+    // if it does return true
+    if(set.has(nums[i])) return true;
+    
+    // if it doesn't, push it to the set
+    set.add(nums[i]);
+  }
+  // if loop finishes and no duplicates return false
+  return false;
+};
+
+// time complexity: O(n) -> less time but more space
+// space complexity: O(n) -> larger space for less time

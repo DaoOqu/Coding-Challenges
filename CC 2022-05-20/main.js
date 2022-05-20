@@ -36,3 +36,32 @@ var isAnagram = function(s, t) {
 
 // time complexity: O(nlogn) -> two sorts
 // space complexity: O(n) -> created array
+
+
+// optimal solution using hashmap:
+
+// what will we do with more than one of the same char?
+// ex: anagram -> 3 'a'
+var isAnagram = function(s, t) {
+  // if strings are not the same length, return false
+  if(s.length !== t.length) return false;
+  
+  // create map for char key and value to char counter
+  let map = new Map();
+  
+  for(let i = 0; i < s.length; i++) {
+    if(map[s[i]]) {
+      map[s[i]]++;
+    } else map[s[i]] = 2;
+  }
+  
+  for(let i = 0; i < t.length; i++) {
+    map[t[i]]--;
+    if(map[t[i]] < 1 || !map[t[i]]) return false;
+  }
+  return true;
+  
+};
+
+// time complexity: O(a + b) -> two loops not nested
+// space complexity: O(n) -> created hashmap

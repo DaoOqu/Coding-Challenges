@@ -27,3 +27,6 @@ function primeTime(num) {
   }
   return num > 1;
 }
+
+// time complexity: O(n) -> O(sqrt(n))
+// space complexity: O(1)

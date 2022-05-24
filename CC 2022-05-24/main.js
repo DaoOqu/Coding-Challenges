@@ -15,3 +15,35 @@
 // will we see integers that come up the same amount of times? and will we have to choose one over the other?
 
 
+//  two loops with hashmap and sort
+var topKFrequent = function(nums, k) {
+  // initialize hashmap to count integer instances
+  // insitialize array to return
+  let map = new Map();
+  let arr = [];
+  
+  // if less than two elements, only one element can be biggest
+  if(nums.length < 2) return nums;
+  
+  // iterating through array
+  for(let i of nums) {
+    // if the hashmap contains the current element then set it with an updated counter
+    if(map.has(i)) {
+      map.set(i, (map.get(i) + 1));
+      // if not, set it with a counter of one
+    } else map.set(i, 1);
+  }
+  
+  // iterate through the hashmap entries and push them to array as an array
+  for (let [key, value] of map.entries()) {
+    arr.push([key, value]);
+  }
+  
+  // sort array based on counter num from biggest to smallest
+  arr.sort((a, b) => b[1] - a[1]);
+  // slice array from 0th to kth index and place it into own array then return
+  return arr.slice(0, k).map(x => x[0]);
+}
+
+// time complexity: O(n log n)
+// space complexity: O(n)

@@ -8,3 +8,44 @@
 
 // ex: ["a,b,c,d,d,-B", "a,b,c,d"]
 // output: true
+
+
+// one input that consists of two strings seperated by a comma
+// -B signifies backspace
+
+// stack problem
+
+function equivalentKeypresses(strArr) {
+  // split each element of array
+  const arr1= strArr[0].split(',');
+  const arr2= strArr[1].split(',');
+
+  // initialize arrays to compare
+  const firstStr = [];
+  const secondStr = [];
+
+  // loop through arrays using forEach
+  arr1.forEach(char => {
+    // if backspace is detected, pop from array
+    if(char === '-B') {
+      firstStr.pop;
+      // if it isnt push it into first string arr
+    } else {
+      firstStr.push(char);
+    }
+  });
+
+  // same methods used for second arr
+  arr2.forEach(char => {
+    // if backspace is detected, pop from array
+    if(char === '-B') {
+      secondStr.pop;
+      // if it isnt push it into first string arr
+    } else {
+      secondStr.push(char);
+    }
+  });
+
+  // compare the arrays and return boolean
+  return(firstStr.join() === secondStr.join());
+}

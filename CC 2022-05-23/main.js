@@ -49,3 +49,6 @@ function equivalentKeypresses(strArr) {
   // compare the arrays and return boolean
   return(firstStr.join() === secondStr.join());
 }
+
+// time complexity: O(n)
+// space complexity: O(n)

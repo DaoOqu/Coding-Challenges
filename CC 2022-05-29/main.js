@@ -60,3 +60,6 @@ var mergeTwoLists = function(list1, list2) {
   return dummy.next;
   
 };
+
+// Time complexity: O(min(n, m)) or O(n + m)??
+// Space complexity: O(1)

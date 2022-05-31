@@ -19,6 +19,8 @@ function fibonacciIterative(num) {
   return arr[num];
 }
 
+// Time complexity: O(n)
+// Space complexity: O(n)
 
 
 // Recursive
@@ -31,3 +33,5 @@ function fibonacciRecursive(num) {
 
 console.log(fibonacciIterative(2));
 
+// Time complexity: O(2^n)
+// Space complexity: O(1)

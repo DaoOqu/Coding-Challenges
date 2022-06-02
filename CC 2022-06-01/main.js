@@ -18,6 +18,9 @@ function reverseStringIterative(str) {
 console.log(reverseStringIterative('yoyo mastery'));
 //should return: 'yretsam oyoy'
 
+// Time complexity: O(n)
+// Space complexity: O(n)
+
 
 function reverseStringRecursive(str) {
   if(str === '') {
@@ -29,3 +32,6 @@ function reverseStringRecursive(str) {
 
 console.log(reverseStringRecursive('yoyo mastery'));
 //should return: 'yretsam oyoy'
+
+// Time complexity: O(2^n)???
+// Space complexity: O(n)???

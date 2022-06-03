@@ -20,7 +20,8 @@ function reverseStringIterative(str) {
 }
 
 console.log(reverseStringIterative('yoyo mastery'));
-
+// Time complexity: O(n)
+// Space complexity: O(n)
 
 
 
@@ -33,3 +34,5 @@ function reverseStringRecursive(str) {
 }
 
 console.log(reverseStringRecursive('yoyo mastery'));
+// Time complexity: O(2^n)
+// Space complexity: O(1)

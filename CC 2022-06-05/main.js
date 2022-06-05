@@ -50,3 +50,5 @@ var isValidBST = function(root) {
   
 };
 
+// Time complexity: O(n) -> all items were traversed
+// Space Complexity: O(n or h) -> where h is the height of tree

@@ -49,3 +49,6 @@ var levelOrder = function(root) {
   
   return list;
 };
+
+// Time complexity: O(n) -> every node is traversed
+// Space complexity: O(n or h) -> based on height of tree

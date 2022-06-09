@@ -44,3 +44,8 @@ var search = function(nums, target) {
 //   }
 //   return -1;
 // }
+
+
+
+// Time complexity: O(log n)
+// space complexity: O(1)

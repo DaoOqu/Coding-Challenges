@@ -32,3 +32,15 @@ var search = function(nums, target) {
   }
   return -1;
 };
+
+
+
+// const search = (nums, target) => {
+//   const map = new Map();
+  
+//   for(let i = 0; i < nums.length; i++) {
+//     map.set(nums[i], true);
+//     if(map.has(target)) return nums.indexOf(target);
+//   }
+//   return -1;
+// }

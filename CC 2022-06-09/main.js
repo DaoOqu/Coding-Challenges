@@ -13,3 +13,22 @@
 // Output: -1
 // Explanation: 2 does not exist in nums so return -1
 
+
+
+var search = function(nums, target) {
+  let min = 0;
+  let max = nums.length - 1;
+  
+  while(min <= max) {
+    let mid = Math.floor((min + max) / 2);
+    
+    if(nums[mid] < target) {
+      min = mid + 1 // 3
+    } else if(nums[mid] > target) { 
+      max = mid - 1;
+    } else {
+      return mid;
+    }
+  }
+  return -1;
+};

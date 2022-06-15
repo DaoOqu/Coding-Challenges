@@ -29,3 +29,5 @@ var isSameTree = function(p, q) {
   return left && right;
 };
 
+// Time complexity: O(p + q) -> worst case we traverse through all nodes
+// Space complexity: O(1) -> no other data structures initialized 

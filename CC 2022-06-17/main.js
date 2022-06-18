@@ -37,6 +37,9 @@ var kthSmallest = function(root, k) {
     }
 };
 
+// Time complexity: O(n) -> where n is the number of nodes we traverse
+// Space complexity: O(n) -> initialized stack that will store 'n' number of nodes
+
 
 
 // recursive
@@ -55,3 +58,6 @@ var kthSmallest = function(root, k) {
   traverse(root);
   return output;
 };
+
+// Time complexity: O(n) -> where n is the number of nodes we traverse
+// Space complexity: O(n) -> initialized stack that will store 'n' number of nodes

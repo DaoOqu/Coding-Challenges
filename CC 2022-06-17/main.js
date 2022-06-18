@@ -15,7 +15,7 @@
 // grab first (smallest) index 
 
 
-iteratively using stack
+// iteratively using stack
 var kthSmallest = function(root, k) {
     let head = root;
     let stack = [];
@@ -35,4 +35,23 @@ var kthSmallest = function(root, k) {
         
         head = head.right;
     }
+};
+
+
+
+// recursive
+var kthSmallest = function(root, k) {
+  let output;
+  
+  const traverse = (root) => {
+    if(root.left) traverse(root.left);
+
+    k--;
+    if(k === 0) output = root.val;
+    
+    if(root.right) traverse(root.right);
+  }
+  
+  traverse(root);
+  return output;
 };

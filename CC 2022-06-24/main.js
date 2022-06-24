@@ -43,5 +43,5 @@ var longestConsecutive = function(nums) {
   return maxSeq;
 };
 
-// Time complexity: O(n) -> iterate through array at least once and visit each number at most twice
+// Time complexity: O(2n) -> O(n) -> iterate through array at least once and visit each number at most twice
 // space complexity: O(n) -> initialized Set

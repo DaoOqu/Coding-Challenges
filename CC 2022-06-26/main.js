@@ -36,3 +36,58 @@
 // repeat until input is iterated
 // return the only item that should be in the stack
 
+var evalRPN = function(tokens) {
+  let stack = [];
+  let result = 0;
+  
+  for(let i = 0; i < tokens.length; i++) {
+    if(tokens[i] === "+") {
+      stack.push(stack.pop() + stack.pop());
+    }
+    else if(tokens[i] === "-") {
+      let a = stack.pop();
+      let b = stack.pop();
+      stack.push(b - a);
+    }
+    else if(tokens[i] === "*") {
+      stack.push(stack.pop() * stack.pop());
+    }
+    else if(tokens[i] === "/") {
+      let a = stack.pop();
+      let b = stack.pop();
+      stack.push(b / a);
+    }
+    else stack.push(BigInt(tokens[i]));
+  }
+  return stack[0];
+};
+
+
+var evalRPN = function(tokens) {
+  let stack = [];
+  let result = 0;
+  
+  for(let element of tokens) {
+    if(element === "+") {
+      stack.push(stack.pop() + stack.pop());
+    }
+    else if(element === "-") {
+      let a = stack.pop();
+      let b = stack.pop();
+      stack.push(b - a);
+    }
+    else if(element === "*") {
+      stack.push(stack.pop() * stack.pop());
+    }
+    else if(element === "/") {
+      let a = stack.pop();
+      let b = stack.pop();
+      stack.push(b / a);
+    }
+    else stack.push(BigInt(element));
+  }
+  return stack[0];
+};
+
+// Time complexity: O(n) -> where n is the size of the input
+// Space complexity: O(n) -> initialized stack

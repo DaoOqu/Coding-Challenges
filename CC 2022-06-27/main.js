@@ -31,3 +31,6 @@ var missingNumber = function(nums) {
   let actualSum = Math.floor((length * (length + 1)) / 2)
   return actualSum - inputSum;
 };
+
+// Time complexity: O(n) -> iterating through array once to sum values
+// Space complexity: O(1) -> no data structures initialized 

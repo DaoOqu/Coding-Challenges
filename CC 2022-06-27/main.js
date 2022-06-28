@@ -16,3 +16,18 @@
 // Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 
 
+
+// arithmetic formula: sum(1-n) = n(n+1)
+// -> (n*(n+1)) / 2
+
+var missingNumber = function(nums) {
+  let inputSum = 0;
+  
+  for(let i = 0; i < nums.length; i++) {
+    inputSum += nums[i];
+  }
+  
+  let length = nums.length
+  let actualSum = Math.floor((length * (length + 1)) / 2)
+  return actualSum - inputSum;
+};

@@ -18,3 +18,44 @@
 // Input: nums = [1], target = 0
 // Output: -1
 
+
+/*
+can i assume the input is an array??
+is the array sorted? decreasing or increasing??
+will the input ever be empty? or any items in the input?
+Is the input validated? negs? whole?
+what am i returning? number? what if target is not inside?
+
+can brute force by iterating through entire array and comparing to target
+O(n) -> not bad but we can do better
+
+
+find mid and split input into two sections
+figure out based on actual value of mid compared to actual value of left variable what section we're in
+if mid is in left section, compare target to mid and left variable
+if mid is in right section compare target to mid and right variable
+based on result you can decide what section(s) to keep looking in
+return index if found or -1 otherwise
+O(log n)
+*/
+
+const search = (nums, target) => {
+  let left = 0;
+  let right = nums.length - 1;
+  
+  while(left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    
+    if(target === nums[mid]) return mid;
+    
+    if(nums[left] <= nums[mid]) { // left section
+      if(target > nums[mid] || target < nums[left]) left = mid + 1;
+      else right = mid - 1;
+    } 
+    else { // right section
+      if(target < nums[mid] || target > nums[right]) right = mid - 1;
+      else left = mid + 1;
+    }
+  }
+  return -1;
+};

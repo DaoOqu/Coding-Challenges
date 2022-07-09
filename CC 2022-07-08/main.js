@@ -60,3 +60,6 @@ var findMedianSortedArrays = function(num1, num2) {
   return result.length % 2 === 0 ? (result[median] + result[median - 1]) / 2 : result[median];
   
 };
+
+// Time complexity: O(log(m + n)) -> merge sort i think?? 
+// Space complexity: O(n) -> array initialized

@@ -12,6 +12,13 @@
 // Output: 3
 
 
+// no data structure can be initialized
+// no modifying input array
+// guaranteed one one repeated number
+// as long as input isnt empty then values will never be zero
+
+
+// NAIVE SOLUTION (BRUTE FORCE)
 // the values in the input are from 1 to the input length inclusive
 // counter to hold values and iterate over and over?
 // two pointers? meets requirements but too inefficient 
@@ -33,3 +40,31 @@ var findDuplicate = function(nums) {
 
 // Time complexity: O(n^2) -> can do better
 // Space complexity: O(1) -> no data structures initialized (meets requirements)
+
+
+// OPTIMIZED SOLUTION
+// Fast & Slow pointers
+// can be treated like a linked list cycle question
+// if there is a unique duplicate there will be a cycle 
+
+var findDuplicate = function(nums) {
+  let slow = nums[0];
+  let fast = nums[nums[0]]
+  
+  // guaranteed to have cycle
+  while(slow !== fast) { 
+    slow = nums[slow];
+    fast = nums[nums[fast]]
+  }
+  
+  slow = 0;
+  
+  // slows fast pointer down
+  while(slow != fast) {
+    slow = nums[slow];
+    fast = nums[fast];
+  }
+  
+  return slow;
+  
+};

@@ -30,3 +30,6 @@ var findDuplicate = function(nums) {
     right = left + 1;
   }
 };
+
+// Time complexity: O(n^2) -> can do better
+// Space complexity: O(1) -> no data structures initialized (meets requirements)

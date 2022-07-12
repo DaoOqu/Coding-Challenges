@@ -11,3 +11,22 @@
 // Input: nums = [3,1,3,4,2]
 // Output: 3
 
+
+// the values in the input are from 1 to the input length inclusive
+// counter to hold values and iterate over and over?
+// two pointers? meets requirements but too inefficient 
+
+var findDuplicate = function(nums) {
+  let left = 0;
+  let right = left + 1;
+  
+  while(left < right) {
+    while(right < nums.length) {
+      if(nums[left] !== nums[right]) {
+        right++;
+      } else return nums[left];
+    }
+    left++;
+    right = left + 1;
+  }
+};

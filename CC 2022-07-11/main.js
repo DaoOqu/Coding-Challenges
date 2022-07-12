@@ -68,3 +68,12 @@ var findDuplicate = function(nums) {
   return slow;
   
 };
+
+// Time complexity: O(n + n) -> O(n)
+// Space complexity: O(1) -> no data structures initialized (meets requirements)
+
+
+// other solutions that DONT meet requirements (no modifications, constant space):
+// negative marking: mark next number as negative while iterating current
+// use hashmap to store seen values
+// sort the array then iterate through and compare values
